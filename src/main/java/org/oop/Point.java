@@ -21,11 +21,11 @@ public class Point {
         return Math.atan2(yDistance, xDistance);
     }
 
-    private double getXCoordinate() {
+    public double getXCoordinate() {
         return xCoordinate;
     }
 
-    private double getYCoordinate() {
+    public double getYCoordinate() {
         return yCoordinate;
     }
 }

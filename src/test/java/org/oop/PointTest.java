@@ -17,11 +17,11 @@ public class PointTest {
     @Test
     void distanceBetweenOriginAndPointsOnUnitCircleShouldBeOne() {
         Point origin = new Point(0, 0);
-        Point point1 = new Point(1, 0);
-        Point point2 = new Point(0, 1);
+        Point firstPoint = new Point(1, 0);
+        Point secondPoint = new Point(0, 1);
 
-        double actualDistance1 = origin.distanceFrom(point1);
-        double actualDistance2 = origin.distanceFrom(point2);
+        double actualDistance1 = origin.distanceFrom(firstPoint);
+        double actualDistance2 = origin.distanceFrom(secondPoint);
 
         assertEquals(1, actualDistance1);
         assertEquals(1, actualDistance2);
@@ -29,10 +29,10 @@ public class PointTest {
 
     @Test
     void distanceBetweenTwoOppositePointsOnUnitCircleShouldBeTwo() {
-        Point point1 = new Point(1, 0);
-        Point point2 = new Point(-1, 0);
+        Point firstPoint = new Point(1, 0);
+        Point secondPoint = new Point(-1, 0);
 
-        double actualDistance = point1.distanceFrom(point2);
+        double actualDistance = firstPoint.distanceFrom(secondPoint);
 
         assertEquals(2, actualDistance);
     }
@@ -40,11 +40,11 @@ public class PointTest {
     @Test
     void originAndPointOnPositiveXAxisShouldBeZeroRadiansAway() {
         Point origin = new Point(0, 0);
-        Point point1 = new Point(1, 0);
-        Point point2 = new Point(3, 0);
+        Point firstPoint = new Point(1, 0);
+        Point secondPoint = new Point(3, 0);
 
-        double actualDirection1 = origin.directionFrom(point1);
-        double actualDirection2 = origin.directionFrom(point2);
+        double actualDirection1 = origin.directionFrom(firstPoint);
+        double actualDirection2 = origin.directionFrom(secondPoint);
 
         assertEquals(0, actualDirection1);
         assertEquals(0, actualDirection2);
@@ -53,11 +53,11 @@ public class PointTest {
     @Test
     void originAndPointOnNegativeXAxisShouldBePiRadiansAway() {
         Point origin = new Point(0, 0);
-        Point point1 = new Point(-1, 0);
-        Point point2 = new Point(-3, 0);
+        Point firstPoint = new Point(-1, 0);
+        Point secondPoint = new Point(-3, 0);
 
-        double actualDirection1 = origin.directionFrom(point1);
-        double actualDirection2 = origin.directionFrom(point2);
+        double actualDirection1 = origin.directionFrom(firstPoint);
+        double actualDirection2 = origin.directionFrom(secondPoint);
 
         assertEquals(Math.PI, actualDirection1);
         assertEquals(Math.PI, actualDirection2);
@@ -66,11 +66,11 @@ public class PointTest {
     @Test
     void originAndPointOnYAxisShouldBeHalfPiRadiansAway() {
         Point origin = new Point(0, 0);
-        Point point1 = new Point(0, 1);
-        Point point2 = new Point(0, 3);
+        Point firstPoint = new Point(0, 1);
+        Point secondPoint = new Point(0, 3);
 
-        double actualDirection1 = origin.directionFrom(point1);
-        double actualDirection2 = origin.directionFrom(point2);
+        double actualDirection1 = origin.directionFrom(firstPoint);
+        double actualDirection2 = origin.directionFrom(secondPoint);
 
         assertEquals(Math.PI / 2, actualDirection1);
         assertEquals(Math.PI / 2, actualDirection2);
